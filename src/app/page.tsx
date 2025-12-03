@@ -1,11 +1,31 @@
-import Image from "next/image";
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Projects from '@/components/Projects';
+import Contact from '@/components/Contact';
+import Skills from '@/components/Skills';
+import Education from '@/components/Education';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-900 p-24">
-      <h1 className="text-5xl font-bold text-blue-500 hover:text-blue-300 transition">
-        Hello Next.js + Tailwind!
-      </h1>
+    <main className="flex flex-col items-center p-4 sm:p-8 md:p-12">
+      <div id="hero">
+        <Hero />
+      </div>
+      <div id="about">
+        <About />
+      </div>
+      <div id="skills">
+        <Skills />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="education">
+        <Education />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
     </main>
   );
 }

@@ -4,28 +4,24 @@ import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Skills from '@/components/Skills';
 import Education from '@/components/Education';
+import SkillsVelocity from '@/components/SkillsVelocity';
+import SoftSkills from '@/components/SoftSkills';
+import Navbar from '@/components/Navbar';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center p-4 sm:p-8 md:p-12">
-      <div id="hero">
+    <>
+      <Navbar />
+      <main className="flex flex-col items-center p-0">
         <Hero />
-      </div>
-      <div id="about">
         <About />
-      </div>
-      <div id="skills">
         <Skills />
-      </div>
-      <div id="projects">
         <Projects />
-      </div>
-      <div id="education">
+        <SkillsVelocity />
         <Education />
-      </div>
-      <div id="contact">
+        <SoftSkills />
         <Contact />
-      </div>
-    </main>
+      </main>
+    </>
   );
 }

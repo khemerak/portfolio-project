@@ -1,9 +1,8 @@
-import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { DotPattern } from "@/components/ui/dot-pattern";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,11 +37,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <DotPattern
-            className="fixed top-0 left-0 w-full h-full -z-10 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]"
-          />
-          <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

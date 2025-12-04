@@ -13,7 +13,7 @@ This is the source code for my personal portfolio website, built with Next.js an
 
 - **Framework:** [Next.js](https://nextjs.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **UI Components:** [magicui.design](https://magicui.design/)
+- **UI Components:** [magicui.design](https://magicui.design/)/[reactbits.dev](https://reactbits.dev)
 - **Deployment:** Vercel (or your preferred platform)
 
 ## Getting Started

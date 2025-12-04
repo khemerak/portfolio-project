@@ -12,20 +12,6 @@ interface LineShadowTextProps
   as?: React.ElementType;
 }
 
-const withMotion = <P extends object>(
-  Component: React.ComponentType<P>
-): React.FC<P & MotionProps> => {
-  const MotionComponent = motion.create(
-    Component as React.ComponentType<any>
-  ) as React.FC<P & MotionProps>;
-  const WithMotion: React.FC<P & MotionProps> = (props) => (
-    <MotionComponent {...props} />
-  );
-  WithMotion.displayName = `withMotion(${
-    Component.displayName || Component.name || "Component"
-  })`;
-  return WithMotion;
-};
 
 const MemoizedLineShadowText = memo(
   ({
@@ -35,13 +21,8 @@ const MemoizedLineShadowText = memo(
     as: Component = "span",
     ...props
   }: LineShadowTextProps) => {
-    const MotionComponent = withMotion(Component);
+    const MotionComponent = motion(Component);
     const content = typeof children === "string" ? children : null;
-
-    if (!content) {
-      throw new Error("LineShadowText only accepts string content");
-    }
-
     return (
       <MotionComponent
         style={{ "--shadow-color": shadowColor } as React.CSSProperties}
@@ -61,6 +42,7 @@ const MemoizedLineShadowText = memo(
     );
   }
 );
+
 
 MemoizedLineShadowText.displayName = "LineShadowText";
 

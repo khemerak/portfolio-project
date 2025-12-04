@@ -22,14 +22,12 @@ export default function SoftSkills() {
       <div className="flex justify-center px-4">
         <MagicBento
           textAutoHide={false}
-          enableStars={true}
           enableSpotlight={true}
           enableBorderGlow={true}
           enableTilt={true}
           enableMagnetism={false}
           clickEffect={true}
           spotlightRadius={300}
-          particleCount={12}
           glowColor="132, 0, 255"
           className="w-full max-w-4xl"
         >
